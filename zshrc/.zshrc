@@ -54,4 +54,8 @@ alias k='kubectl'
 alias dc='docker compose'
 
 # kubectl autocomplete
-source <(kubectl completion zsh)
+if command -v kubectl &> /dev/null; then
+  autoload -Uz compinit
+  compinit
+  source <(kubectl completion zsh)
+fi
