@@ -48,3 +48,7 @@ new_tmux () {
 alias tm=new_tmux
 alias zed='zeditor'
 export PATH="$HOME/.local/bin:$PATH"
+
+# Kubernetes and Docker aliases
+alias k='kubectl'
+alias dc='docker compose'
