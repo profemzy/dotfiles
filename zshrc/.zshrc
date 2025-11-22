@@ -52,3 +52,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Kubernetes and Docker aliases
 alias k='kubectl'
 alias dc='docker compose'
+
+# kubectl autocomplete
+source <(kubectl completion zsh)
