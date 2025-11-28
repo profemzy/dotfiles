@@ -199,6 +199,11 @@ Modern shell configuration with smart integrations.
 - `SUDO_EDITOR=nvim`
 - `PGHOST=/var/run/postgresql`
 
+**Secrets Management:**
+- Secrets are loaded from `~/.secrets` (not tracked by git)
+- Create the file with: `echo 'export MY_API_KEY="your-key"' >> ~/.secrets`
+- File is automatically sourced if it exists
+
 **History:**
 - File: `~/.history`
 - Size: 10,000 commands in memory
@@ -879,4 +884,4 @@ This is a personal configuration repository. Feel free to fork and adapt for you
 
 ---
 
-**Last Updated:** 2025-11-21
+**Last Updated:** 2025-11-28
