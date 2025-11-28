@@ -4,6 +4,9 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export PGHOST="/var/run/postgresql"
 
+# Load secrets from ~/.secrets (not tracked by git)
+# Create this file with: echo 'export AZURE_OPENAI_API_KEY="your-key"' >> ~/.secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -16,7 +19,7 @@ setopt inc_append_history
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.local/share/omarchy/bin:$PATH"
+export PATH="$HOME/.local/share/omarchy/bin:$PATH"
 eval "$(/usr/bin/mise activate zsh)"
 
 new_tmux () {
