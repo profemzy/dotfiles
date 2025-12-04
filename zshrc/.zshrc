@@ -20,7 +20,7 @@ setopt inc_append_history
 source <(fzf --zsh)
 
 export PATH="$HOME/.local/share/omarchy/bin:$PATH"
-eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 new_tmux () {
   session_dir=$(zoxide query --list | fzf)
