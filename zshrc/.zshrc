@@ -50,6 +50,7 @@ new_tmux () {
 
 alias tm=new_tmux
 alias zed='zeditor'
+alias opn='opnsense-cli'
 export PATH="$HOME/.local/bin:$PATH"
 
 # Kubernetes and Docker aliases
